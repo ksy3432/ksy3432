@@ -7,31 +7,30 @@
 </head>
 <body>
 <header>
-    <h3>New_age</h3>
+    <h2>New_age</h2>
 </header>
 <section>
     <hr>
+    <br>
     <div>
-        <h4>사이트</h4>
-        설명
+        <h4>뉴에이지란?</h4>
+        <h5>설명</h5>
     </div>
     <br>
     <form>
         <fieldset>
-            <input type="text" list="newagelist">
-                <datalist id="newagelist">
-                    <option value="겨울"></option>
-                    <option value="여름"></option>
-                    <option value="가을"></option>
-                    <option value="봄"></option>
-                </datalist>
-            <input type="button" name="newagelist" value="이동">
-            <input type="reset" name="newagelist" value="리셋">
+            옆의 박스에서 원하는 분위기를 골라주세요! :
+            <select title="" onchange="window.open(value,'_self');">
+                <option>분위기 선택</option>
+                <option value="winter.html">겨울</option>
+                <option value="summer.html">여름</option>
+                <option value="autumn.html">가을</option>
+                <option value="spring.html">봄</option>
+            </select>
         </fieldset>
     </form>
-
-
 </section>
+<br>
 
 <footer>copyright by ksy</footer>
 
