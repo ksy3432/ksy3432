@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>newage_winter</title>
+    <link href="./subpage.css" type="text/css" rel="stylesheet">
+    <script>
+        var winter_music_list = [1,2,3];
+        function choose_music(){
+
+        }
+        function change_img(){
+
+        }
+    </script>
 </head>
 <body>
-<h3>winter</h3>
+<header>
+    <h3>(winter) 분위기 선택 중</h3>
+    <hr>
+</header>
+<section>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <input type="button" value="<<" onclick="choose_music()">
+                </td>
+                <td>
+                    <h3 id="name">playlist 현재 나오는 곡 명 - 작곡가 명</h3>
+                </td>
+                <td>
+                    <input type="button" value=">>" onclick="choose_music()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <img src="https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg" onclick="change_img()">
+</section>
 
 </body>
 </html>
