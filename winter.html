@@ -6,8 +6,10 @@
     <link href="./subpage.css" type="text/css" rel="stylesheet">
     <script>
         var winter_music_list = [1,2,3];
-        function choose_music(){
+        function choose_music(obj){
+            if(obj.id === "before"){
 
+            }
         }
         function change_img(){
 
@@ -24,20 +26,24 @@
         <table>
             <tr>
                 <td>
-                    <input type="button" value="<<" onclick="choose_music()">
+                    <input id="before" type="button" value="<<" onclick="choose_music(this)">
                 </td>
                 <td>
                     <h3 id="name">playlist 현재 나오는 곡 명 - 작곡가 명</h3>
+                    <h2>hello world!</h2>
                 </td>
                 <td>
-                    <input type="button" value=">>" onclick="choose_music()">
+                    <input id="next" type="button" value=">>" onclick="choose_music(this)">
                 </td>
             </tr>
         </table>
     </form>
     <br>
     <img src="https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg" onclick="change_img()">
+    
 </section>
+<br>
+<footer>copyright@kimseyeon</footer>
 
 </body>
 </html>
