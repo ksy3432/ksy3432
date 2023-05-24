@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    margin: auto auto;
+}
+
+table{
+    height: 20px;
+    width: 80%;
+    text-align: center;
+    margin: auto auto;
+    border-color: blueviolet;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+form input{
+    height: 40px;
+}
+
+section img{
+    width: 80%;
+    height: 500px;
+}
+#name{
+
+}
