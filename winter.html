@@ -11,8 +11,25 @@
 
             }
         }
-        function change_img(){
 
+        var number = 1;
+        function change_img(){
+            var chan = document.getElementById("btn_id");
+            if(chan){
+                if(number >= 3){
+                    number = 1;
+                }
+                else{
+                    number++;
+                }
+            }
+            chan.style.backgroundImage = "url(./img/winter/"+ number +".jpg)";
+        }
+
+        function down_img(){
+            var path = document.getElementById("down_url");
+            let pass = "./img/winter/"+number+".jpg";
+            path.setAttribute('href',pass);
         }
     </script>
 </head>
@@ -26,21 +43,41 @@
         <table>
             <tr>
                 <td>
-                    <input id="before" type="button" value="<<" onclick="choose_music(this)">
-                </td>
-                <td>
-                    <h3 id="name">playlist 현재 나오는 곡 명 - 작곡가 명</h3>
-                    <h2>hello world!</h2>
-                </td>
-                <td>
-                    <input id="next" type="button" value=">>" onclick="choose_music(this)">
+                    <h3 id="name">playlist Winter</h3>
+                        현재 나오는 곡 명 - 작곡가 명
+                    <select name="music">
+                        <option value="1">merrychristmas mr.lawrence - 류이치 사카모토</option>
+                        <option value="2">the last emperor - 류이치 사카모토</option>
+                    </select>
                 </td>
             </tr>
         </table>
     </form>
     <br>
-    <img src="https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg" onclick="change_img()" alt="사진없음">
-    
+    <div>
+        <a href="./img/winter/1.jpg" id="down_url" download>
+            <button type="button" id="btn_id" onclick="down_img()" title="사진을 다운받으려면 클릭하세요"></button>
+        </a>
+    </div>
+        <button type="button" class="after" onclick=change_img() src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <td>
+                <input id="before" type="button" value="<<" onclick="choose_music(this)">
+            </td>
+            <td>
+                <audio src="Merry%20Christmas%20Mr%20Lawrence.mp3" controls>
+                    브라우저가 태그를 지원하지 않습니다
+                </audio>
+            </td>
+            <td>
+                <input id="next" type="button" value=">>" onclick="choose_music(this)">
+            </td>
+        </tr>
+    </table>
+
 </section>
 <br>
 <footer>copyright@kimseyeon</footer>

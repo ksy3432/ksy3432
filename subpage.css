@@ -27,3 +27,18 @@ section img{
 #name{
 
 }
+
+div button{
+    height: 500px;
+    width: 80%;
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg");
+}
+
+.after{
+    margin: 0 0 0 60%;
+}
+
+audio{
+    width: 800px;
+}
