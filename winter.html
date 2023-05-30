@@ -6,7 +6,7 @@
     <link href="./subpage.css" type="text/css" rel="stylesheet">
     <script>
         function choose_music(){
-            var mus = document.getElementById("music");
+            var mus = document.getElementById("play");
             var name = document.getElementById("music_name");
             var select_value = name.options[name.selectedIndex].value;
                 if(select_value === 2){
@@ -37,49 +37,42 @@
 </head>
 <body>
 <header>
-    <h3>(winter) 분위기 선택 중</h3>
+    <h3>PlayList Winter</h3>
     <hr>
 </header>
 <section>
     <form>
-        <table>
-            <tr>
-                <td>
-                    <h3 id="name">playlist Winter</h3>
-                        현재 나오는 곡 명 - 작곡가 명
-                    <select name="music" id="music_name" onchange="choose_music()">
-                        <option value="1">merrychristmas mr.lawrence - 류이치 사카모토</option>
-                        <option value="2">Flower dance - Dj okawari</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
+        <h3 id="name">현재 나오는 곡 명 - 작곡가 명</h3>
+        <select name="music" id="music_name" onchange="choose_music()">
+            <option value="1">Merrychristmas mr.lawrence - 류이치 사카모토</option>
+            <option value="2">Flower dance - Dj okawari</option>
+        </select>
     </form>
     <br>
     <div>
-        <a href="./img/winter/1.jpg" id="down_url" download>
-            <button type="button" id="btn_id" onclick="down_img()" title="사진을 다운받으려면 클릭하세요"></button>
-        </a>
+        <table>
+            <tr>
+                <td>
+                    <input id="before" type="button" value="<<" onclick="choose_music()">
+                </td>
+                <td>
+                    <a href="./img/winter/1.jpg" id="down_url" download>
+                        <button type="button" id="btn_id" onclick="down_img()" title="사진을 다운받으려면 클릭하세요"></button>
+                    </a>
+                </td>
+                <td>
+                    <input id="next" type="button" value=">>" onclick="choose_music()">
+
+                </td>
+            </tr>
+        </table>
     </div>
         <button type="button" class="after" onclick=change_img(1) src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
     <br>
     <br>
-    <table>
-        <tr>
-            <td>
-                <input id="before" type="button" value="<<" onclick="choose_music()">
-            </td>
-            <td>
-                <audio id="music" src="Merry_Christmas_Mr_Lawrence.mp3" controls>
-                    브라우저가 태그를 지원하지 않습니다
-                </audio>
-
-            </td>
-            <td>
-                <input id="next" type="button" value=">>" onclick="choose_music()">
-            </td>
-        </tr>
-    </table>
+    <audio id="play" src="Merry_Christmas_Mr_Lawrence.mp3" controls>
+        브라우저가 태그를 지원하지 않습니다
+    </audio>
 
 </section>
 <br>

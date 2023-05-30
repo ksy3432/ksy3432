@@ -4,15 +4,18 @@ body{
     height: 100%;
     margin: auto auto;
 }
+form{
+    border-color: blueviolet;
+    border-style: dotted;
+    border-width: 1px;
+    height: 100px;
+}
 
 table{
     height: 20px;
     width: 80%;
     text-align: center;
     margin: auto auto;
-    border-color: blueviolet;
-    border-style: dotted;
-    border-width: 1px;
 }
 
 form input{
@@ -28,11 +31,13 @@ section img{
 
 }
 
-div button{
+div a button{
     height: 500px;
-    width: 80%;
+    width: 500px;
     text-align: center;
     background-image: url("https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg");
+    border-radius: 100%;
+
 }
 
 .after{
