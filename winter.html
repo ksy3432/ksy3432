@@ -146,7 +146,7 @@
 <div id="body_page">
     <section>
         <form>
-            <table>
+            <table id="menu">
                 <tr>
                     <td id="before" onclick="choose_music(this)">
                         <h2><u>B</u>efore</h2>
@@ -165,23 +165,103 @@
         </form>
         <br>
         <div>
-            <table id="right">
+            <table id="table_all">
                 <tr>
-                   <td>
-                       <button type="button" onclick="down_img()" id="btn_id" title="사진을 다운받으려면 클릭하세요"></button>
-                   </td>
+                    <td>
+                        <table id="left" border="1" >
+                            <tr>
+                                <td class="table_choose_select" id="sns">sns</td>
+                                <td class="table_choose_select" id="tw">twitter</td>
+                            </tr>
+                            <tr>
+                                <td class="table_choose_select" id="insta">insta</td>
+                                <td class="table_choose_select" id="face">facebook</td>
+                            </tr>
+                            <tr>
+                                <td class="table_choose_select" id="address">출처</td>
+                                <td class="table_choose_select" id="etc">...</td>
+                            </tr>
+                            <tr>
+                                <td class="table_choose_select">메인</td>
+                                <td class="table_choose_select">기타2</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table id="right" border="1" style="border: white;border-width: 2px;border-style: solid" cellspacing=0 cellpadding=0>
+                            <tr>
+                                <td colspan="3" rowspan="3" onclick="down_img()" id="btn_id" title="사진을 다운받으려면 클릭하세요">
+                                </td>
+                                <td>
+                                    <button type="button" class="scroll_button">&#9650;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="right_scroll">
+                                    <a href="./img/winter/1.jpg" id="down_url" download>
+                                        <button id="after_img1" type="button" onclick="down_img()">사진을 다운받으려면 클릭하세요</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="scroll_button">&#9660;</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="scroll_button">&#x25c0;</button>
+                                </td>
+                                <td id="bottom_scroll">
+                                    <button type="button" class="after_img" onclick=change_img(1) src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="scroll_button">&#x25b6;</button>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+
+
+            <!--<table id="right" border="1" style="border: white;border-width: 2px;border-style: solid" cellspacing=0 cellpadding=0>
+                <tr>
+                    <td colspan="3" rowspan="3" onclick="down_img()" id="btn_id" title="사진을 다운받으려면 클릭하세요">
+                    </td>
+                    <td>
+                        <button type="button" class="scroll_button">&#9650;</button>
+                    </td>
+                </tr>
+                <tr>
                     <td id="right_scroll">
                         <a href="./img/winter/1.jpg" id="down_url" download>
-                            <button class="after_img" type="button" onclick="down_img()">사진을 다운받으려면 클릭하세요</button>
+                            <button id="after_img1" type="button" onclick="down_img()">사진을 다운받으려면 클릭하세요</button>
                         </a>
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <button type="button" class="scroll_button">&#9660;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="scroll_button">&#x25c0;</button>
+                    </td>
                     <td id="bottom_scroll">
                         <button type="button" class="after_img" onclick=change_img(1) src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
                     </td>
+                    <td>
+                        <button type="button" class="scroll_button">&#x25b6;</button>
+                    </td>
+                    <td></td>
                 </tr>
-            </table>
+
+            </table>--->
             <br>
             <table>
                 <tr>

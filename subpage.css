@@ -14,14 +14,15 @@ header{
     font-weight: 100;
 }
 
+
 #btn_id{
     /*margin: 0 25%;*/
 }
 
 
 section{
-    background-color: plum;
-    height: 600px;
+    background-color: #FFCCFF;
+    height: 680px;
 }
 form{
     border-color: gray;
@@ -37,6 +38,9 @@ h2{
     font-size: 30px;
     font-weight: 400;
     text-align: left;
+}
+#table_all{
+    margin-left: 2%;
 }
 
 /*form button{
@@ -64,14 +68,55 @@ form input{
     height: 500px;
     background-color: aqua;
 }*/
-#right{
-   margin: 0 0 0 30%;
+#right {
+    width: 95%;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 0 0 0 5%;
+    margin-left: 0;
+}
 
+.table_choose_select{
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+}
+
+#tw{
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/18/11/16/social-1834013__340.png");
+}
+#sns{
+    background-size: 100px 100px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/25/22/55/message-1770255_640.png");
+}
+
+#insta{
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/18/11/16/instagram-1834010__340.png");
+}
+
+#face{
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/18/11/16/facebook-1834007__340.png");
+}
+
+#address{
+    background-size: 180px 220px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/18/11/17/youtube-1834016_640.png");
+}
+
+#etc{
+    background-size: 100px 100px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/16/15/01/note-1911565__340.png");
+}
+
+#left{
+    margin: 0 10% 0 0;
 }
 
 #btn_id{
-    height: 400px;
-    width: 800px;
+    height: 460px;
+    width:800px;
    /* text-align: center;
     background-position: center;*/
     background-size: 100% 100%;
@@ -80,15 +125,27 @@ form input{
     border-width: 3px;
     border-color: black;
     border-style: solid;
-
 }
 
 .after_img{
    /* background-size: 300px 30px;*/
-    background-color: plum;
+    background-color: #FFCCFF;
+    border-top-color: #EAEAEA;
+    border-left-color: #EAEAEA;
+    height: 100%;
 }
+
+#after_img1{
+    /* background-size: 300px 30px;*/
+    background-color: #FFCCFF;
+    border-top-color: #EAEAEA;
+    border-left-color: #EAEAEA;
+}
+
 #bottom_scroll{
     background-color: antiquewhite;
+    width: 800px;
+    height: 10px;
 }
 #right_scroll{
     height: 400px;
@@ -97,6 +154,24 @@ form input{
 }
 
 audio{
-    width: 1100px;
-    margin: 0 60px;
+    width: 1000px;
+    margin: 0 2%;
+
+}
+
+.scroll_button{
+  padding: 5px 5px;
+    border-top-color: #EAEAEA;
+    border-left-color: #EAEAEA;
+    background-color: #FFCCFF;
+    border-style: wave;
+}
+
+.scroll{
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+}
+
+button{
 }
