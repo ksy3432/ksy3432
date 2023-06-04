@@ -1,15 +1,26 @@
 body{
-    padding: 20px;
-    width: 80%;
+    width: 100%;
     height: 100%;
     /*background-position: center center;*/
     margin: 0 auto;
 }
 div{
-    background-color: antiquewhite;
+    background-color: #FFCCFF;
     width: 80%;
     margin: 0 auto;
-    border-radius: 50px;
+}
+
+#main_title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.right_title{
+    width: 30px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: #FFCCFF;
 }
 
 div nav{
@@ -17,9 +28,8 @@ div nav{
     width: 80%;
     height: 20%;
     background-position: center;
-    background-color: aliceblue;
+    background-color: #FFCCFF;
     text-align: center;
-    border-radius: 15px;
 }
 string{
     color: red;
@@ -31,18 +41,18 @@ string{
 div header{
     background-position: center;
     width: 100%;
-    height: 50px;
+    height: 40px;
     font-size: medium;
     font-style: italic;
     color : darkred;
     text-align: center;
-    background-color: burlywood;
-    border-radius: 30px 30px 0 0;
+    background-color: mediumorchid;
 }
 
 div section{
-    background-color: #EAEAEA;
+    background-color: #FFCCFF;
     margin-top: 10px;
+    height: 500px;
 }
 
 div form{
@@ -75,10 +85,9 @@ div tr{
 }
 
 div tr td img{
-    height: 200px;
-    width: 200px;
+    height: 280px;
+    width: 280px;
     opacity: 0.7;
-    border-radius: 50%;
     margin: 0 auto;
 }
 
