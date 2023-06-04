@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: auto auto;
     background-color: antiquewhite;
@@ -8,20 +8,44 @@ body{
 header{
     background-color: mediumorchid;
     height: 40px;
+    font-size: 23px;
+    color: #EAEAEA;
+    font-style: inherit;
+    font-weight: 100;
+}
+
+#btn_id{
+    /*margin: 0 25%;*/
 }
 
 
-#body_page{
+section{
     background-color: plum;
+    height: 600px;
 }
 form{
     border-color: gray;
     border-style: double;
     border-width: 2px;
-    height: 100px;
+    height: 50px;
 }
 
-table{
+h2{
+    color: black;
+    margin: auto 15px;
+    font-style: unset;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+}
+
+/*form button{
+    background-color: plum;
+    height: 50px;
+    width: 80px;
+}*/
+
+/*table{
     border-width: 2px;
     border-color: black;
     border-style: double;
@@ -29,35 +53,50 @@ table{
     width: 70%;
     text-align: center;
     margin: auto 28%;
-}
+}*/
 
 form input{
     height: 40px;
 }
 
-section img{
+/*section img{
     width: 80%;
     height: 500px;
     background-color: aqua;
-}
-#name{
+}*/
+#right{
+   margin: 0 0 0 30%;
 
 }
 
-div a button{
+#btn_id{
     height: 400px;
-    width: 650px;
-    text-align: center;
-    background-position: center;
+    width: 800px;
+   /* text-align: center;
+    background-position: center;*/
     background-size: 100% 100%;
-    background-image: url("https://cdn.pixabay.com/photo/2013/10/27/17/14/snowfall-201496_960_720.jpg");
     opacity: 0.7;
+    background-image: url("./img/winter/1.jpg");
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+
 }
 
-.after{
-    margin: 0 0 0 60%;
+.after_img{
+   /* background-size: 300px 30px;*/
+    background-color: plum;
+}
+#bottom_scroll{
+    background-color: antiquewhite;
+}
+#right_scroll{
+    height: 400px;
+    width: 10px;
+    background-color: antiquewhite;
 }
 
 audio{
-    width: 800px;
+    width: 1100px;
+    margin: 0 60px;
 }

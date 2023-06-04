@@ -19,20 +19,98 @@
                 mus.currentTime = 0;
                 }
         }*/
-        function choose_music() {
-            var mus = document.getElementById("play");
-            var select_music = document.getElementById("music_name");
-            var select_value = parseInt(select_music.options[select_music.selectedIndex].value);
+        var basic_path = "./music_source/winter/";
+        var mus_number=1;
 
-            if (select_value === 1) {
-                mus.setAttribute('src', "./music_source/winter/Merry_Christmas_Mr_Lawrence.mp3");
+        function choose_music(obj){
+            var mus = document.getElementById("play");
+            var title = document.getElementById("music_name");
+            var blank_name = document.getElementById("blank");
+            if(obj.id === "before"){
+                switch(mus_number){
+                    case 1:
+                        mus.setAttribute('src', basic_path + "6.mp3");
+                        mus_number = 6;
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>E</u>piloque - Lee Byung woo"
+                        break;
+                    case 2:
+                        mus.setAttribute('src', basic_path + "1.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>M</u>erry Christmas Mr Lawrence - Ryuichisakamoto"
+                        mus_number = 1;
+                        break;
+                    case 3:
+                        mus.setAttribute('src', basic_path + "2.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>F</u>lower Dance - DJ Okawari"
+                        mus_number = 2;
+                        break;
+                    case 4:
+                        mus.setAttribute('src', basic_path + "3.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>T</u>he song of soul - July"
+                        mus_number = 3;
+                        break;
+                    case 5:
+                        mus.setAttribute('src', basic_path + "4.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>T</u>ime to love - October"
+                        mus_number = 4;
+                        break;
+                    default:
+                        mus.setAttribute('src', basic_path + "5.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>F</u>irst love - Ryuichisakamoto"
+                        mus_number = 5;
+                        break;
+                }
+
             }
 
-            if (select_value === 2) {
-                mus.setAttribute('src', "./music_source/winter/Flower_Dance.mp3");
-                mus.currentTime = 0;
+            if(obj.id === "next"){
+                switch(mus_number){
+                    case 1:
+                        mus.setAttribute('src', basic_path + "2.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>F</u>lower Dance - DJ Okawari"
+                        mus_number = 2;
+                        break;
+                    case 2:
+                        mus.setAttribute('src', basic_path + "3.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>T</u>he song of soul - July"
+                        mus_number = 3;
+                        break;
+                    case 3:
+                        mus.setAttribute('src', basic_path + "4.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>T</u>ime to love - October"
+                        mus_number = 4;
+                        break;
+                    case 4:
+                        mus.setAttribute('src', basic_path + "5.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>F</u>irst love - Ryuichisakamoto"
+                        mus_number = 5;
+                        break;
+                    case 5:
+                        mus.setAttribute('src', basic_path + "6.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>E</u>piloque - Lee Byung woo"
+                        mus_number = 6;
+                        break;
+                    default:
+                        mus.setAttribute('src', basic_path + "1.mp3");
+                        blank_name.innerHTML = "<h2>(곡명 - 작곡가명)</h2>";
+                        title.innerHTML = "<u>M</u>erry Christmas Mr Lawrence - Ryuichisakamoto"
+                        mus_number = 1;
+                        break;
+                }
+
             }
         }
+
 
         function control_progress(){
 
@@ -41,7 +119,7 @@
 
         var number = 1;
         function change_img(){
-            var chan = document.getElementById("back_img");
+            var chan = document.getElementsByClassName("after_img");
             if(chan){
                 if(number >= 3){
                     number = 1;
@@ -68,37 +146,58 @@
 <div id="body_page">
     <section>
         <form>
-            <h3 id="name">현재 나오는 곡 명 - 작곡가 명</h3>
-            <select name="music" id="music_name" onchange="choose_music()">
-                <option value="1">Merrychristmas mr.lawrence - 류이치 사카모토</option>
-                <option value="2">Flower dance - Dj okawari</option>
-            </select>
-        </form>
-        <br>
-        <div>
             <table>
                 <tr>
-                    <td>
-                        <input id="before" type="button" value="<<" onclick="control_progress()">
-                    <td>
-                    <td>
-                        <a href="./img/winter/1.jpg" id="down_url" download>
-                            <button type="button" id="btn_id" onclick="down_img()" title="사진을 다운받으려면 클릭하세요"></button>
-                        </a>
+                    <td id="before" onclick="choose_music(this)">
+                        <h2><u>B</u>efore</h2>
+                    </td>
+                    <td id="next" onclick="choose_music(this)">
+                        <h2><u>N</u>ext</h2>
+                    </td>
+                    <td id="blank">
+                        <h2></h2>
                     </td>
                     <td>
-                        <input id="next" type="button" value=">>" onclick="control_progress()">
+                        <h2 id="music_name"><u>현</u>재 나오는 곡- 작곡가명</h2>
                     </td>
                 </tr>
             </table>
+        </form>
+        <br>
+        <div>
+            <table id="right">
+                <tr>
+                   <td>
+                       <button type="button" onclick="down_img()" id="btn_id" title="사진을 다운받으려면 클릭하세요"></button>
+                   </td>
+                    <td id="right_scroll">
+                        <a href="./img/winter/1.jpg" id="down_url" download>
+                            <button class="after_img" type="button" onclick="down_img()">사진을 다운받으려면 클릭하세요</button>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="bottom_scroll">
+                        <button type="button" class="after_img" onclick=change_img(1) src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <audio id="play" src="./music_source/winter/1.mp3" controls autoplay loop>
+                            브라우저가 태그를 지원하지 않습니다
+                        </audio>
+                    </td>
+                    <!--
+                    <td>
+                        <input id="next_img" type="button" value=">>" onclick="control_progress()">
+                    </td>
+                    -->
+                </tr>
+            </table>
         </div>
-        <button type="button" class="after" onclick=change_img(1) src="www.naver.com">이 사진이 마음에 들지 않으신가요?</button>
-        <br>
-        <br>
-        <audio id="play" src="./music_source/winter/Merry_Christmas_Mr_Lawrence.mp3" controls autoplay loop>
-            브라우저가 태그를 지원하지 않습니다
-        </audio>
-
     </section>
     <br>
     <footer>copyright@kimseyeon</footer><br>
