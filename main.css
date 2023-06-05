@@ -10,6 +10,10 @@ div{
     margin: 0 auto;
 }
 
+#page_body{
+    margin-top: 2%;
+}
+
 #main_title {
     margin-top: 0;
     margin-bottom: 0;
