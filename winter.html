@@ -97,6 +97,9 @@
             }
         }
 
+        function show_popup(){
+            window.open("./music_list_winter.html","a","width=400, height=300, left=100, top=50")
+        }
 
         var number = 1;
         function change_img(obj){
@@ -199,11 +202,10 @@
                             </tr>
                             <tr>
                                 <td class="table_choose_select" id="address" onclick="link_address()">출처</td>
-                                <td class="table_choose_select" id="etc">...</td>
-                            </tr>
+                                <td class="table_choose_select" id="etc" onclick="show_popup()">Music_list</td>                            </tr>
                             <tr>
                                 <td class="table_choose_select" id="chase_main" onclick="location.href='./index.html'">메인</td>
-                                <td class="table_choose_select">기타2</td>
+                                <td class="table_choose_select">...</td>
                             </tr>
                             <tr>
                                 <td>공간 1</td>

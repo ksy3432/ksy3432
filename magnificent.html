@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>newage_magnificient</title>
+    <title>newage_Magnificent</title>
     <link href="./subpage.css" type="text/css" rel="stylesheet">
     <style>
         #btn_id{
@@ -12,6 +12,11 @@
     <script>
         var basic_path = "./music_source/magnificient/";
         var mus_number=1;
+        var music_list = ["F l o w e r - 이루마","The Last canival - Norihiro Tsuru","Horizon - Acoustic Cafe","너를 내 품에 안고 - 숲의 계절","Memory and moonlight - JUly","Prologue - Long Roads - 이병우","연 - JayM","From There - Acoustic Cafe"];
+
+        function show_popup(){
+            window.open("./music_list_magnificient.html","a","width=400, height=300, left=100, top=50")
+        }
 
         function choose_music(obj){
             var mus = document.getElementById("play");
@@ -237,11 +242,10 @@
                             </tr>
                             <tr>
                                 <td class="table_choose_select" id="address" onclick="link_address()">출처</td>
-                                <td class="table_choose_select" id="etc">...</td>
-                            </tr>
+                                <td class="table_choose_select" id="etc" onclick="show_popup()">Music_list</td>                            </tr>
                             <tr>
                                 <td class="table_choose_select" id="chase_main" onclick="location.href='./index.html'">메인</td>
-                                <td class="table_choose_select">기타2</td>
+                                <td class="table_choose_select">...</td>
                             </tr>
                             <tr>
                                 <td>공간 1</td>
